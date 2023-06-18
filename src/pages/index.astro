@@ -2,49 +2,46 @@
 import Layout from "../layouts/Layout.astro";
 import { Image } from "@astrojs/image/components";
 import Button from "../components/Button.astro";
-import devguy from "../images/developer-guy.png";
 
-//import ralf from "../images/Ralf.png";
+//import devguy from "../images/developer-guy.png";
+import ralf from "../images/zyro-image.png";
 ---
 
-<Layout title='Startseite' description='Willkommen auf meiner Webseite'>
-  <div class='flex flex-row justify-between items-center'>
-    <div class='w-1/2 flex justify-center items-center py-10'>
+<Layout title='Startseite' description='Das ist meine Startseite'>
+  <div class='flex flex-col xl:flex-row justify-between items-center'>
+    <div class='w-3/4 sm:w-3/5 xl:w-1/2 flex justify-center items-center py-10'>
       <Image
-        src={devguy}
-        width={1200}
-        height={1100}
+        src={ralf}
+        width={678}
+        height={748}
         quality={80}
         format='webp'
-        alt='Alter Dev'
+        alt='Das bin ich'
       />
     </div>
-    <div class='w-1/2 flex flex-col justify-between items-start'>
-      <div class='text-6xl mb-4'>
+    <div
+      class='w-full xl:w-1/2 flex flex-col justify-between items-center xl:items-start'
+    >
+      <div class='text-4xl md:text-6xl text-center xl:text-start mb-4'>
         Visionen mit<br />
         Code und <span
           id='dynamic-header-text'
           class='text-blue-700 dark:text-green-400'>Design</span
-        >
-        <br />
+        ><br />
         zum Leben erwecken
       </div>
-      <div class='mb-6 leading-relaxed'>
-        Du wolltest schon immer wissen wie Du eine Website programierst? Ich
-        zeige Dir in zahlreichen Tutorials wie Du das mit HTML, CSS und
-        JavaScript am besten machst.
+      <div class='mb-6 text-center xl:text-start leading-relaxed'>
+        Du wolltest schon immer wissen wie du eine Website programmierst? Ich
+        zeige dir in zahlreichen Tutorials wie du das mit HTML, CSS und
+        JavaScript am besten machst. Update!
       </div>
       <div class='flex items-center'>
-        <Button
-          url='https://www.facebook.com/ralf.vogel.7'
-          title='Tutorials'
-          external={true}
-        />
+        <Button url='https://ravo-it.de' title='RaVo-IT' external={true} />
         <a
           href='mailto:ralf@ravo-it.de'
-          class='ml-8 font-medium text-dark dark:text-light underline'
-          >Kontakt</a
-        >
+          class='ml-4 font-medium text-dark dark:text-light underline'
+          >Kontakt
+        </a>
       </div>
     </div>
   </div>
